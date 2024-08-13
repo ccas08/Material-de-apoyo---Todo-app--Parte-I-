@@ -18,6 +18,7 @@ const pool = new Pool({
   port: 5432,
 });
 
+
 // Ruta GET para obtener todos los posts
 app.get('/posts', async (req, res) => {
   try {
@@ -43,7 +44,6 @@ app.post('/posts', async (req, res) => {
     res.status(500).json({ error: 'Database query failed' });
   }
 });
-
 // Ruta PUT para actualizar un post existente
 app.put('/posts/:id', async (req, res) => {
   const { id } = req.params;
